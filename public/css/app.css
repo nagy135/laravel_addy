@@ -3,3 +3,39 @@
   color: white;
 }
 
+.product-link {
+  text-decoration: none;
+  color: #0b0b0b;
+}
+
+.product-link:hover {
+  text-decoration: none;
+  color: #0b0b0b;
+}
+
+.page-link {
+  color: #6b3623 !important;
+}
+
+li.page-item.active .page-link {
+  background-color: #6b3623 !important;
+  border-color: #6b3623 !important;
+  color: #b2d3d9 !important;
+}
+
+.stick-bottom-right {
+  position: absolute !important;
+  right: 0 !important;
+  bottom: 0 !important;
+}
+
+.btn-primary {
+  background-color: #6b3623 !important;
+  border-color: #6b3623 !important;
+}
+
+.btn-primary:hover {
+  background-color: #e6a756 !important;
+  color: #6b3623 !important;
+}
+
