@@ -11,7 +11,7 @@ class Product extends Model
     }
 
     public function images(){
-        return $this->hasMany(Image::class);
+        return $this->hasMany(Image::class)->where('thumbnail', false);
     }
 
     public function thumbnail(){

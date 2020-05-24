@@ -1,4 +1,3 @@
-//
 .greeting {
     font-size: x-large;
     color: white;
@@ -6,4 +5,38 @@
 
 body {
     // background-image: linear-gradient(rgba(47,23,15,.65),rgba(47,23,15,.65)),url(/images/bg.jpg);
+}
+
+.product-link {
+    text-decoration: none;
+    color: #0b0b0b;
+    &:hover {
+        text-decoration: none;
+        color: #0b0b0b;
+    }
+}
+.page-link {
+    color: #6b3623 !important;
+}
+li.page-item.active {
+    .page-link {
+        background-color: #6b3623 !important;
+        border-color: #6b3623 !important;
+        color: #b2d3d9 !important;
+    }
+}
+
+.stick-bottom-right {
+    position: absolute !important;
+    right:0 !important;
+    bottom:0 !important;
+}
+
+.btn-primary {
+    background-color: #6b3623 !important;
+    border-color: #6b3623 !important;
+    &:hover{
+        background-color: #e6a756 !important;
+        color: #6b3623 !important;
+    }
 }

@@ -17,4 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeController@index');
 Route::get('/produkty/{category}', 'CatalogController@index');
 Route::get('/produkty', 'CatalogController@index');
+Route::get('/kontakt/{product}', 'ContactController@index');
 Route::get('/kontakt', 'ContactController@index');
+Route::get('/detail/{id}', 'DetailController@show');

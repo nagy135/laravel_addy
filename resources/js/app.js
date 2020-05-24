@@ -9,4 +9,8 @@ $(document).ready(function(){
             window.location = '/produkty/' + value;
         }
     });
+    $("#buy-button").click(function(){
+        let url_split = window.location.pathname.split('/');
+        window.location = '/kontakt/' + url_split[url_split.length-1];
+    });
 });

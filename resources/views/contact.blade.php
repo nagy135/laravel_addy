@@ -11,11 +11,30 @@
           <div class="col-xl-9 col-lg-10 mx-auto">
             <div class="bg-faded rounded p-5">
               <h2 class="section-heading mb-4">
-                <span class="section-heading-upper">Strong Coffee, Strong Roots</span>
-                <span class="section-heading-lower">About Our Cafe</span>
+                <span class="section-heading-upper">Máte záujem o nejaký produkt?</span>
+                <span class="section-heading-lower">Kontaktujte ma</span>
               </h2>
-              <p>Founded in 1987 by the Hernandez brothers, our establishment has been serving up rich coffee sourced from artisan farmers in various regions of South and Central America. We are dedicated to travelling the world, finding the best coffee, and bringing back to you here in our cafe.</p>
-              <p class="mb-0">We guarantee that you will fall in <em>lust</em> with our decadent blends the moment you walk inside until you finish your last sip. Join us for your daily routine, an outing with friends, or simply just to enjoy some alone time.</p>
+<form>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="form__email" aria-describedby="emailHelp" placeholder="Váš email">
+    <small id="emailHelp" class="form-text text-muted">Adresa na, ktorej Vás môžem kontaktovať</small>
+  </div>
+  <div class="form-group">
+    <label for="product-id">Produkt ID</label>
+    <input type="text" class="form-control" id="product-id" disabled 
+        @if(!is_null($product_id))
+            value="{{$product_id}}"
+        @endif
+    >
+    <small id="productIdHelp" class="form-text text-muted">Na detailnej stránke produktu, máte tlačidlo <strong>Objednať</strong>, ktoré vyplní toto pole
+        @if(isset($product_name))
+            <br><strong>Vybratý produkt:&nbsp;</strong>{{ $product_name }}
+        @endif
+    </small>
+  </div>
+  <button type="submit" class="btn btn-primary">Objednať</button>
+</form>
             </div>
           </div>
         </div>
