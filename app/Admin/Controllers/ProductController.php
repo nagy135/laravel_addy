@@ -15,7 +15,7 @@ class ProductController extends AdminController
      *
      * @var string
      */
-    protected $title = 'App\Product';
+    protected $title = 'Produkt';
 
     /**
      * Make a grid builder.
@@ -51,11 +51,11 @@ class ProductController extends AdminController
         $show = new Show(Product::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('title', __('Title'));
-        $show->field('description', __('Description'));
+        $show->field('title', __('Názov'));
+        $show->field('description', __('Popis'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
-        $show->field('category_id', __('Category id'));
+        $show->field('category_id', __('Kategória ID'));
 
         return $show;
     }
@@ -71,7 +71,6 @@ class ProductController extends AdminController
 
         $form->text('title', __('Názov'));
         $form->text('description', __('Popis'));
-        /* $form->number('category_id', __('Category id')); */
 
         $categories_options = [];
         $categories = \App\Category::all();

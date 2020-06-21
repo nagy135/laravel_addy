@@ -15,7 +15,7 @@ class ImageController extends AdminController
      *
      * @var string
      */
-    protected $title = 'App\Image';
+    protected $title = 'Obrázok';
 
     /**
      * Make a grid builder.
@@ -28,13 +28,13 @@ class ImageController extends AdminController
         foreach (\App\Product::all() as $product){
             $product_mapping[$product->id] = $product->title;
         }
-        
+      
         $grid = new Grid(new Image());
 
         $grid->column('id', __('ID'));
         $grid->column('name', __('Názov'));
-        $grid->column('path', __('Image'));
-        $grid->column('thumbnail', __('Thumbnail'));
+        $grid->column('path', __('Obrázok'));
+        $grid->column('thumbnail', __('Thumbnail (hlavná fotka)'));
         $grid->column('product_id', __('Produkt'))->replace($product_mapping);
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
@@ -53,9 +53,9 @@ class ImageController extends AdminController
         $show = new Show(Image::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('name', __('Name'));
-        $show->field('path', __('Path'));
-        $show->field('product_id', __('Product ID'));
+        $show->field('name', __('Názov'));
+        $show->field('path', __('Obrázok'));
+        $show->field('product_id', __('Produkt ID'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -73,7 +73,7 @@ class ImageController extends AdminController
 
         $form->text('name', __('Názov'));
         $form->image('path')->move('public/product_images')->uniqueName();
-        $form->switch('thumbnail', __('Thumbnail'));
+        $form->switch('thumbnail', __('Thumbnail (hlavná fotka)'));
 
         $product_options = [];
         $products = \App\Product::all();
